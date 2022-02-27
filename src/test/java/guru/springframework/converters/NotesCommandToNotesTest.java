@@ -1,7 +1,8 @@
 package guru.springframework.converters;
 
 import guru.springframework.commands.NotesCommand;
-import guru.springframework.domain.Notes;
+import guru.springframework.converters.NotesCommandToNotes;
+import guru.springframework.domain.Note;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,7 +38,7 @@ public class NotesCommandToNotesTest {
         notesCommand.setRecipeNotes(RECIPE_NOTES);
 
         //when
-        Notes notes = converter.convert(notesCommand);
+        Note notes = converter.convert(notesCommand);
 
         //then
         assertNotNull(notes);

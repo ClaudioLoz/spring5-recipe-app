@@ -4,6 +4,7 @@ import guru.springframework.commands.CategoryCommand;
 import guru.springframework.commands.IngredientCommand;
 import guru.springframework.commands.NotesCommand;
 import guru.springframework.commands.RecipeCommand;
+import guru.springframework.converters.*;
 import guru.springframework.domain.Difficulty;
 import guru.springframework.domain.Recipe;
 import org.junit.Before;
@@ -97,7 +98,7 @@ public class RecipeCommandToRecipeTest {
         assertEquals(SERVINGS, recipe.getServings());
         assertEquals(SOURCE, recipe.getSource());
         assertEquals(URL, recipe.getUrl());
-        assertEquals(NOTES_ID, recipe.getNotes().getId());
+        assertEquals(NOTES_ID, recipe.getNote().getId());
         assertEquals(2, recipe.getCategories().size());
         assertEquals(2, recipe.getIngredients().size());
     }

@@ -1,6 +1,7 @@
 package guru.springframework.converters;
 
 import guru.springframework.commands.RecipeCommand;
+import guru.springframework.converters.*;
 import guru.springframework.domain.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -57,10 +58,10 @@ public class RecipeToRecipeCommandTest {
         recipe.setSource(SOURCE);
         recipe.setUrl(URL);
 
-        Notes notes = new Notes();
+        Note notes = new Note();
         notes.setId(NOTES_ID);
 
-        recipe.setNotes(notes);
+        recipe.setNote(notes);
 
         Category category = new Category();
         category.setId(CAT_ID_1);
