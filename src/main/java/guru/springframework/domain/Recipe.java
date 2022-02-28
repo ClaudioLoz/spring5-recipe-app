@@ -44,11 +44,13 @@ public class Recipe {
         return this;
     }
 
-
-
     public void setNote(Note note) {
+        if (note==null) {
+            return;
+        }
         this.note = note;
         note.setRecipe(this);
+
     }
 
 }
